@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Food Information</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Dog Food Information</h1>
+
+    <div id="food-list">
+      <h2>Foods Safe for Dogs</h2>
+      <ul id="safe-foods"></ul>
+
+      <h2>Foods to Avoid for Dogs</h2>
+      <ul id="avoid-foods"></ul>
+    </div>
+
+    <div id="add-food-form">
+      <h2>Add a New Food</h2>
+      <input type="text" id="new-food-input" placeholder="Enter a new food">
+      <button onclick="addNewFood()">Add</button>
+    </div>
+
+    <div id="add-avoid-food-form">
+      <h2>Add a Food to Avoid</h2>
+      <input type="text" id="new-avoid-food-input" placeholder="Enter a new food to avoid">
+      <button onclick="addNewAvoidFood()">Add</button>
+    </div>
+
+    <div id="search-food">
+      <h2>Search for a Food</h2>
+      <input type="text" id="search-input" oninput="searchFoods()" placeholder="Search for a food">
+    </div>
+
+    <div id="toggle-foods">
+      <label>
+        <input type="checkbox" id="safe-foods-toggle" onchange="toggleFoods()"> Show Safe Foods
+      </label>
+      <label>
+        <input type="checkbox" id="avoid-foods-toggle" onchange="toggleFoods()"> Show Foods to Avoid
+      </label>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
