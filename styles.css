@@ -1,0 +1,109 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#app {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* 리스트 스타일링 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+/* 입력 폼 스타일링 */
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 검색 폼 스타일링 */
+#search-food input[type="text"],
+#search-cat-food input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 토글 스타일링 */
+#toggle-foods label {
+  margin-right: 20px;
+}
+
+#toggle-foods input {
+  margin-right: 5px;
+}
+
+/* 강조 스타일: 먹어도 되는 음식 */
+.safe-food {
+  background-color: #eaf7ea; /* 연한 녹색 배경색 */
+  color: #4caf50; /* 녹색 텍스트 색상 */
+}
+
+/* 강조 스타일: 피해야 할 음식 */
+.avoid-food {
+  background-color: #fde9eb; /* 연한 빨간 배경색 */
+  color: #d9534f; /* 빨간 텍스트 색상 */
+}
+
+/* 강조 스타일: 먹어도 되는 고양이 음식 */
+.safe-cat-food {
+  background-color: #e6eff8; /* 연한 파란 배경색 */
+  color: #007bff; /* 파란 텍스트 색상 */
+}
+
+/* 강조 스타일: 피해야 할 고양이 음식 */
+.avoid-cat-food {
+  background-color: #fee2e5; /* 연한 분홍 배경색 */
+  color: #dc3545; /* 분홍 텍스트 색상 */
+}

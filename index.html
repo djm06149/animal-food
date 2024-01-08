@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Food Information</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>반려동물 음식 정보</h1>
+
+    <div id="toggle-pets">
+      <button onclick="showDogMenu()">강아지</button>
+      <button onclick="showCatMenu()">고양이</button>
+    </div>
+
+    <div id="dog-menu">
+      <h2>강아지 음식</h2>
+      <div id="food-list">
+        <h3>섭취 가능 음식</h3>
+        <ul id="safe-foods"></ul>
+
+        <h3>섭취 불가 음식</h3>
+        <ul id="avoid-foods"></ul>
+      </div>
+
+      <div id="add-food-form">
+        <h3>섭취 가능 음식 추가</h3>
+        <input type="text" id="new-food-input" placeholder="Enter a new food">
+        <button onclick="addNewFood()">추가</button>
+      </div>
+
+      <div id="add-avoid-food-form">
+        <h3>섭취 불가 음식 추가</h3>
+        <input type="text" id="new-avoid-food-input" placeholder="Enter a new food to avoid">
+        <button onclick="addNewAvoidFood()">추가</button>
+      </div>
+
+      <div id="search-food">
+        <h3>음식 검색</h3>
+        <input type="text" id="search-input" oninput="searchFoods()" placeholder="Search for a food">
+      </div>
+
+      <div id="toggle-foods">
+        <label>
+          <input type="checkbox" id="safe-foods-toggle" onchange="toggleFoods()"> 섭취 가능 음식 보기
+        </label>
+        <label>
+          <input type="checkbox" id="avoid-foods-toggle" onchange="toggleFoods()"> 섭취 불가 음식 보기
+        </label>
+      </div>
+    </div>
+
+    <div id="cat-menu" style="display: none;">
+      <h2>고양이 음식</h2>
+      <div id="cat-food-list">
+        <h3>섭취 가능 음식</h3>
+        <ul id="safe-cat-foods"></ul>
+
+        <h3>섭취 불가 음식</h3>
+        <ul id="avoid-cat-foods"></ul>
+      </div>
+
+      <div id="add-cat-food-form">
+        <h3>섭취 가능 음식 추가</h3>
+        <input type="text" id="new-cat-food-input" placeholder="Enter a new cat food">
+        <button onclick="addNewCatFood()">추가</button>
+      </div>
+
+      <div id="add-avoid-cat-food-form">
+        <h3>섭취 불가 음식 추가</h3>
+        <input type="text" id="new-avoid-cat-food-input" placeholder="Enter a new cat food to avoid">
+        <button onclick="addNewAvoidCatFood()">추가</button>
+      </div>
+
+      <div id="search-cat-food">
+        <h3>음식 검색</h3>
+        <input type="text" id="search-cat-input" oninput="searchCatFoods()" placeholder="Search for a cat food">
+      </div>
+
+      <div id="toggle-cat-foods">
+        <label>
+          <input type="checkbox" id="safe-cat-foods-toggle" onchange="toggleCatFoods()"> 섭취 가능 음식 보기
+        </label>
+        <label>
+          <input type="checkbox" id="avoid-cat-foods-toggle" onchange="toggleCatFoods()"> 섭취 불가 음식 보기
+        </label>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
